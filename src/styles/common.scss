@@ -1,0 +1,22 @@
+@import "mixins";
+@import "variables";
+
+body {
+  background: $coffee;
+  margin: 0 auto;
+  width: 120vh;
+}
+
+@media (max-width: 56.8em) {
+
+  body {
+    width: 113vh;
+  }
+}
+
+@media (max-width: 31.6em) {
+
+  body {
+    width: 61vh;
+  }
+}

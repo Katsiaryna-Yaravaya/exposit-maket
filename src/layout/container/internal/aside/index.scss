@@ -1,0 +1,61 @@
+@import "src/styles/common";
+
+.aside {
+  flex-grow: 1;
+  background: $lightYellow;
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__title {
+    background: $lightBlue;
+    border: .2em solid $gold;
+    height: 3.4em;
+    border-radius: .6em;
+    margin: 1.4em 1.8em;
+  }
+
+  &__button {
+    @include positionBlock(flex, baseline, center);
+    margin-top: 48em;
+  }
+
+  &__button-end {
+    @include size(4em, 70%, .6em);
+    background: $lightBlue;
+    border: .2em solid $gold;
+    margin: 1em 2em;
+  }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@media (max-width: 56.8em) {
+
+  .aside {
+    &__button {
+      margin-top: 34em;
+    }
+  }
+}
+
+@media (max-width: 31.6em) {
+
+  .aside {
+    &__title {
+      border: .2em solid #DAA520;
+      height: 2.4em;
+      margin: 1em 6em 0 3em;
+    }
+
+    &__button {
+      margin: 1em 7em 0 3em;
+    }
+  }
+}
