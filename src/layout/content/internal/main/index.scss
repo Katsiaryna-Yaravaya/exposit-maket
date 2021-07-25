@@ -32,14 +32,14 @@
       background: $blue;
       text-align: center;
 
-      &__button-top {
+      &__registration {
         background: $brown;
         border: none;
         margin: 1em 0;
         @include size(10%, 62%, .4em);
       }
 
-      &__button-bottom {
+      &__exit {
         background: $brown;
         border: none;
         @include size(10%, 62%, .4em);
@@ -111,7 +111,7 @@
 
 
 
-@media (max-width: 56.8em) {
+@include for-tablet-portrait-up {
 
   .main {
 
@@ -120,7 +120,7 @@
       .double-button {
         height: 23em;
 
-        &__button-bottom {
+        &__exit {
           bottom: -18em;
         }
       }
@@ -138,7 +138,7 @@
   }
 }
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
   .main {
     &__general-content {
@@ -157,11 +157,11 @@
         width: 15em;
         height: 20em;
 
-        &__button-top {
+        &__registration {
           @include size(5em, 11em, .4em);
         }
 
-        &__button-bottom {
+        &__exit {
           @include size(5em, 11em, .4em);
           bottom: -9em;
         }

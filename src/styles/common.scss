@@ -7,14 +7,14 @@ body {
   width: 120vh;
 }
 
-@media (max-width: 56.8em) {
+@include for-tablet-portrait-up {
 
   body {
     width: 113vh;
   }
 }
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
   body {
     width: 61vh;

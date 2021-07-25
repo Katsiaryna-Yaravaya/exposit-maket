@@ -4,7 +4,7 @@
   background: $gold;
   height: 3em;
 
-  .button-nav {
+  .nav {
     margin: 0 3em;
     padding-top: .4em;
 
@@ -22,19 +22,19 @@
 //------------------------------------------
 
 
-@media (max-width: 56.8em) {
+@include for-tablet-portrait-up {
 
   .footer {
-    .button-nav {
+    .nav {
       margin: 0 2.4em;
     }
   }
 }
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
   .footer {
-    .button-nav {
+    .nav {
       margin: 0 9.6em;
     }
   }

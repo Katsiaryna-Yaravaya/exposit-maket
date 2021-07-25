@@ -3,13 +3,13 @@ import Main from "./internal/main"
 
 import "./index.scss"
 
-const Container = () => {
-
+const Content = () => {
     return (
-        <div className="container">
+        <div className="content">
             <Aside/>
             <Main/>
         </div>
     );
 }
-export default Container;
+
+export default Content;

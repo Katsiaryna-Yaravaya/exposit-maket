@@ -9,3 +9,10 @@
   width: $wd;
   border-radius: $br;
 }
+
+@mixin for-phone-only {
+  @media (max-width: 31.6em) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 56.8em) { @content; }
+}

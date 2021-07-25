@@ -1,7 +1,6 @@
 import "./index.scss"
 
 const Header = () => {
-
     return (
         <header className="header">
             <div className="header__menu-bar">

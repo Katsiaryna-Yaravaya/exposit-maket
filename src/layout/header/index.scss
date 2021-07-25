@@ -38,7 +38,7 @@
 //------------------------------------------
 
 
-@media (max-width: 56.8em) {
+@include for-tablet-portrait-up {
 
   .header {
     &__menu-bar {
@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
   .header {
     &__menu-bar {

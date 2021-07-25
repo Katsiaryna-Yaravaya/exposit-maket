@@ -1,4 +1,6 @@
-.container {
+@import "src/styles/common";
+
+.content {
   display: flex;
 }
 
@@ -8,9 +10,9 @@
 //------------------------------------------
 
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
-  .container {
+  .content {
     flex-direction: column;
   }
 }

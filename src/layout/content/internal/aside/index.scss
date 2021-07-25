@@ -17,12 +17,12 @@
     margin: 1.4em 1.8em;
   }
 
-  &__button {
+  &__box {
     @include positionBlock(flex, baseline, center);
     margin-top: 48em;
   }
 
-  &__button-end {
+  .box__button-end {
     @include size(4em, 70%, .6em);
     background: $lightBlue;
     border: .2em solid $gold;
@@ -36,16 +36,16 @@
 //------------------------------------------
 
 
-@media (max-width: 56.8em) {
+@include for-tablet-portrait-up {
 
   .aside {
-    &__button {
+    &__box {
       margin-top: 34em;
     }
   }
 }
 
-@media (max-width: 31.6em) {
+@include for-phone-only {
 
   .aside {
     &__title {
@@ -54,7 +54,7 @@
       margin: 1em 6em 0 3em;
     }
 
-    &__button {
+    &__box {
       margin: 1em 7em 0 3em;
     }
   }

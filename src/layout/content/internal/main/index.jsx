@@ -1,7 +1,6 @@
 import "./index.scss"
 
 const Main = () => {
-
     return (
         <main className="main">
             <section className="main__general-content">
@@ -9,8 +8,8 @@ const Main = () => {
                     <input className="input-container__input" type="button"/>
                 </div>
                 <div className="double-button">
-                    <button className="double-button__button-top"/>
-                    <button className="double-button__button-bottom"/>
+                    <button className="double-button__registration"/>
+                    <button className="double-button__exit"/>
                 </div>
             </section>
 
