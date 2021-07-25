@@ -1,0 +1,71 @@
+@import "src/styles/common";
+
+.header {
+  background: $gold;
+  border-radius: .4em;
+
+  &__menu-bar {
+    @include positionBlock(flex, center, space-around);
+
+    .menu-bar {
+      @include positionBlock(flex, center, space-between);
+      height: 4em;
+
+      &__logo {
+        @include size(3em, 3em, 22em);
+        background: $lavender;
+      }
+
+      &__nav {
+        background: $lightBrown;
+        @include size(3em, 15em, .4em);
+        border: none;
+        margin-left: 2em;
+      }
+    }
+  }
+
+    &__button {
+      background: $lightBrown;
+      @include size(3em, 15em, .4em);
+      border: none;
+    }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@include for-tablet-portrait-up {
+
+  .header {
+    &__menu-bar {
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 2em;
+      padding-bottom: 1em;
+    }
+
+    &__button {
+      margin-left: 5.4em;
+    }
+  }
+}
+
+@include for-phone-only {
+
+  .header {
+    &__menu-bar {
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 2em;
+      padding-bottom: 1em;
+    }
+
+    &__button {
+      margin-left: 5.4em;
+    }
+  }
+}

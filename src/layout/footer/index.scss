@@ -1,0 +1,41 @@
+@import "src/styles/common";
+
+.footer {
+  background: $gold;
+  height: 3em;
+
+  .nav {
+    margin: 0 3em;
+    padding-top: .4em;
+
+    &__button {
+      background: $lightBrown;
+      @include size(2.4em, 14em, .4em);
+      border: none;
+    }
+  }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@include for-tablet-portrait-up {
+
+  .footer {
+    .nav {
+      margin: 0 2.4em;
+    }
+  }
+}
+
+@include for-phone-only {
+
+  .footer {
+    .nav {
+      margin: 0 9.6em;
+    }
+  }
+}

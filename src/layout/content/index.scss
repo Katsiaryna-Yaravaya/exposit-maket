@@ -1,0 +1,18 @@
+@import "src/styles/common";
+
+.content {
+  display: flex;
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@include for-phone-only {
+
+  .content {
+    flex-direction: column;
+  }
+}

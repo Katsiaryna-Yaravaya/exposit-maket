@@ -1,0 +1,22 @@
+@import "mixins";
+@import "variables";
+
+body {
+  background: $coffee;
+  margin: 0 auto;
+  width: 120vh;
+}
+
+@include for-tablet-portrait-up {
+
+  body {
+    width: 113vh;
+  }
+}
+
+@include for-phone-only {
+
+  body {
+    width: 61vh;
+  }
+}

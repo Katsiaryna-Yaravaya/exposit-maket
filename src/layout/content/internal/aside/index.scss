@@ -1,0 +1,61 @@
+@import "src/styles/common";
+
+.aside {
+  flex-grow: 1;
+  background: $lightYellow;
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__title {
+    background: $lightBlue;
+    border: .2em solid $gold;
+    height: 3.4em;
+    border-radius: .6em;
+    margin: 1.4em 1.8em;
+  }
+
+  &__box {
+    @include positionBlock(flex, baseline, center);
+    margin-top: 48em;
+  }
+
+  .box__button-end {
+    @include size(4em, 70%, .6em);
+    background: $lightBlue;
+    border: .2em solid $gold;
+    margin: 1em 2em;
+  }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@include for-tablet-portrait-up {
+
+  .aside {
+    &__box {
+      margin-top: 34em;
+    }
+  }
+}
+
+@include for-phone-only {
+
+  .aside {
+    &__title {
+      border: .2em solid #DAA520;
+      height: 2.4em;
+      margin: 1em 6em 0 3em;
+    }
+
+    &__box {
+      margin: 1em 7em 0 3em;
+    }
+  }
+}

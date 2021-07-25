@@ -1,0 +1,18 @@
+@mixin positionBlock($dp, $ali, $jk) {
+  display: $dp;
+  align-items: $ali;
+  justify-content: $jk;
+}
+
+@mixin size($hg, $wd, $br) {
+  height: $hg;
+  width: $wd;
+  border-radius: $br;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 31.6em) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 56.8em) { @content; }
+}

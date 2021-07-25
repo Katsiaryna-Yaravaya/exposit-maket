@@ -1,0 +1,207 @@
+@import "src/styles/common";
+
+.main {
+  flex-grow: 2;
+
+  &__general-content {
+    @include positionBlock(flex, center, space-between);
+    background: $yellow;
+
+    .input-container {
+      height: 32em;
+      margin: 2em;
+      flex-grow: 5;
+      border: .5em solid $blue;
+      border-radius: 1.4em;
+      background: $blue;
+      @include positionBlock(flex, center, center);
+
+      &__input {
+        @include size(10%, 62%, .4em);
+        background: $brown;
+        border: none;
+      }
+    }
+
+    .double-button {
+      height: 32em;
+      margin: 2em;
+      flex-grow: 5;
+      border: .4em solid $blue;
+      border-radius: 1.5em;
+      background: $blue;
+      text-align: center;
+
+      &__registration {
+        background: $brown;
+        border: none;
+        margin: 1em 0;
+        @include size(10%, 62%, .4em);
+      }
+
+      &__exit {
+        background: $brown;
+        border: none;
+        @include size(10%, 62%, .4em);
+        position: relative;
+        bottom: -26em;
+      }
+    }
+  }
+
+  &__secondary-content {
+    background: $blue;
+    padding: 2em;
+
+    .img-box {
+      @include positionBlock(flex, center, space-around);
+      height: 23em;
+      border-radius: 2em;
+      background: $brown;
+
+      &__img {
+        background: $blue;
+        @include size(62%, 40%, 2em);
+      }
+    }
+  }
+
+  .button-box {
+    @include positionBlock(flex, center, space-evenly);
+    margin-top: 3em;
+
+    &__button-left {
+      height: 14em;
+      flex-grow: 2;
+      border-radius: 2em;
+      background: $yellow;
+      @include positionBlock(flex, baseline, center);
+    }
+
+    &__button-middle {
+      height: 14em;
+      flex-grow: 2;
+      border-radius: 2em;
+      margin: 0 2em;
+      background: $yellow;
+      @include positionBlock(flex, center, center);
+    }
+
+    &__button-right {
+      height: 14em;
+      border-radius: 2em;
+      background: $yellow;
+      flex-grow: 2;
+      @include positionBlock(flex, flex-end, center);
+    }
+
+    &__button {
+      background: $blue;
+      border: none;
+      @include size(3em, 72%, 1em);
+      margin: 2em 0;
+    }
+  }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+
+@include for-tablet-portrait-up {
+
+  .main {
+
+    &__general-content {
+      .input-container,
+      .double-button {
+        height: 23em;
+
+        &__exit {
+          bottom: -18em;
+        }
+      }
+    }
+
+    &__secondary-content {
+      .img-box {
+        height: 19em;
+      }
+    }
+
+    .button-box {
+      margin-top: 2em;
+    }
+  }
+}
+
+@include for-phone-only {
+
+  .main {
+    &__general-content {
+      flex-direction: column;
+
+      .input-container {
+        width: 15em;
+        height: 20em;
+
+        &__input {
+          @include size(5em, 11em, .4em);
+        }
+      }
+
+      .double-button {
+        width: 15em;
+        height: 20em;
+
+        &__registration {
+          @include size(5em, 11em, .4em);
+        }
+
+        &__exit {
+          @include size(5em, 11em, .4em);
+          bottom: -9em;
+        }
+      }
+    }
+
+    &__secondary-content {
+      .img-box {
+        flex-direction: column;
+        width: 20em;
+        margin: auto;
+        height: 23em;
+
+        &__img {
+          @include size(10em, 10em, 2em);
+        }
+      }
+    }
+
+    .button-box {
+      margin-top: 2em;
+      flex-direction: column;
+
+      &__button-left {
+        width: 11em;
+      }
+
+      &__button-middle {
+        width: 11em;
+        margin: 1.4em auto;
+      }
+
+      &__button-right {
+        width: 11em;
+      }
+
+      &__button {
+        @include size(3em, 72%, 1em);
+        margin: 2em 0;
+      }
+    }
+  }
+}
